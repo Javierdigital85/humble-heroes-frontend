@@ -16,11 +16,7 @@ const HeroeForm = () => {
   });
 
   const handleInputChange = (e: inputChange) => {
-    const value =
-      e.target.name === "humilityScore"
-        ? Number(e.target.value)
-        : e.target.value;
-    setHero({ ...hero, [e.target.name]: value });
+    setHero({ ...hero, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
