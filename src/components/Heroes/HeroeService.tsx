@@ -1,10 +1,12 @@
 import axios from "axios";
 import { Heroe } from "../../interface/Heroe";
 
-export const createHeroes = async (video: Heroe) => {
-  return await axios.post("http://localhost:8000/api/superheroes", video);
+const URL= import.meta.env.VITE_BACKEND_URL || "http://localhost:8000/api/superheroes"
+
+export const createHeroes = async (hero: Heroe) => {
+  return await axios.post(`${URL}`, hero);
 };
 
 export const getHeroes = async () => {
-  return await axios.get<Heroe[]>("http://localhost:8000/api/superheroes");
+  return await axios.get<Heroe[]>(`${URL}`);
 };
