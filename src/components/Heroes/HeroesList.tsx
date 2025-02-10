@@ -19,14 +19,14 @@ const HeroesList = () => {
     <>
       {heroes.length > 0 ? (
         <div className="row">
-          <h1 className="text-center">Heroes List</h1>
+          <h1 className="text-center text-info">Super Heroes List</h1>
           {heroes.map((heroe) => (
             <HeroeItem key={heroe.id} heroe={heroe} />
           ))}
         </div>
       ) : (
         <div className="text-center d-flex align-items-center justify-content-center vh-100">
-          <h2>Welcome to Super Hereos App.</h2>
+          <h1 className="text-info">Welcome to Super Heroes App.</h1>
         </div>
       )}
     </>
